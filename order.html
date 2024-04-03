@@ -68,6 +68,29 @@
           bottom: 15px;
           margin: auto;
         }
+
+        .custom-table{
+          width: 92vw;
+          position: absolute;
+          margin: auto;
+
+          border: 4px solid #32008E;
+          border-radius: 10px 10px 10px 10px;
+
+          top: 50px;
+          left: 0;
+          right: 0;
+        }
+        .custom-btn{
+          position: absolute;
+          right: 40px;
+          bottom: 40px
+        }
+
+        .btn{
+          background-color: #32008E;
+          font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -107,7 +130,50 @@
     </div>
   </nav>
   <div class="pane">
-
+    <table class="custom-table table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Order ID</th>
+          <th scope="col">Customer Name</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Product Type</th>
+          <th scope="col">QTY</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">O001</th>
+          <td>Roshen</td>
+          <td>Munchee</td>
+          <td>Biscuit</td>
+          <td>100</td>
+          <td>580</td>
+        </tr>
+        <tr>
+          <th scope="row">O001</th>
+          <td>Roshen</td>
+          <td>Munchee</td>
+          <td>Biscuit</td>
+          <td>100</td>
+          <td>580</td>
+        </tr>
+        <tr>
+          <th scope="row">O001</th>
+          <td>Roshen</td>
+          <td>Munchee</td>
+          <td>Biscuit</td>
+          <td>100</td>
+          <td>580</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="custom-btn">
+      <button class="btn btn-primary" type="button">New Order</button>
+      <button class="btn btn-primary" type="button">Delete</button>
+      <a href="neworder.html"><button class="btn btn-primary" type="button">Update</button></a>
+      
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
