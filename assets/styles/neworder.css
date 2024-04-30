@@ -1,0 +1,89 @@
+.custom-nav{
+    width: 75px;
+    background-color: white;
+    color: #32008E;
+    border: 1px solid #32008E;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    left: 17px;
+  }
+
+  .custom-nav:hover{
+    background-color: #32008E;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .pane{
+    width: 98vw;
+    height: 83vh;
+    position: absolute;
+    border-radius: 10px 10px 10px 10px;
+
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin: auto;
+  }
+
+  .neworder-custom-id{
+    position: absolute;
+    top: 0px;
+    left: 30px;
+  }
+
+  .detail{
+    width: 80vw;
+    position: absolute;
+
+    top: 40px;
+    left: 0;
+    right:0;
+    margin: auto;  
+  }
+
+  .neworder-custom-table{
+    width: 80vw;
+    position: absolute;
+    margin: auto;
+
+    border: 4px solid #32008E;
+    border-radius: 10px 10px 10px 10px;
+
+    top: 320px;
+    left: 0;
+    right: 0;
+  }
+
+  label{
+    font-weight: bold;
+  }
+
+  .cus-label{
+    color: #32008E;
+  }
+
+  .form-control{
+    border: 4px solid #32008E;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .form-select {
+    border: 4px solid #32008E;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  @media all and (max-width: 768px) {
+    .neworder-custom-table{
+      width: 80vw;
+      position: absolute;
+      margin: auto;
+
+      border: 4px solid #32008E;
+      border-radius: 10px 10px 10px 10px;
+
+      top: 800px;
+      left: 0;
+      right: 0;
+    }
+  }

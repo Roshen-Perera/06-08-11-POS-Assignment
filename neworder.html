@@ -75,7 +75,7 @@
           margin: auto;
         }
 
-        .custom-id{
+        .neworder-custom-id{
           position: absolute;
           top: 0px;
           left: 30px;
@@ -91,7 +91,7 @@
           margin: auto;  
         }
 
-        .custom-table{
+        .neworder-custom-table{
           width: 80vw;
           position: absolute;
           margin: auto;
@@ -123,7 +123,7 @@
         }
 
         @media all and (max-width: 768px) {
-          .custom-table{
+          .neworder-custom-table{
             width: 80vw;
             position: absolute;
             margin: auto;
@@ -174,96 +174,98 @@
       </div>
     </div>
   </nav>
-  <div class="pane">
-    <div class="detail">
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="row g-3">
-          <div class="col-md-3">
-            <label for="inputEmail4" class="form-label">Order ID: </label>
-            <label for="inputEmail4" class="form-label cus-label">O001</label>
+  <div id="neworder-page">
+    <div class="pane">
+      <div class="detail">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <label for="inputEmail4" class="form-label">Order ID: </label>
+              <label for="inputEmail4" class="form-label cus-label">O001</label>
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Order Date: </label>
+              <label for="inputEmail4" class="form-label cus-label">03/03/2024</label>
+            </div>
           </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Order Date: </label>
-            <label for="inputEmail4" class="form-label cus-label">03/03/2024</label>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <label for="validationCustom04" class="form-label">Customer ID</label>
+              <select class="form-select" id="" required>
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Customer name</label>
+              <input type="text" class="form-control" id="" value="Otto" required>
+            </div>
           </div>
-        </div>
-        <div class="row g-3">
-          <div class="col-md-3">
-            <label for="validationCustom04" class="form-label">Customer ID</label>
+          <div class="col-md-2">
+            <label for="validationCustom04" class="form-label">Product ID</label>
             <select class="form-select" id="" required>
               <option selected disabled value="">Choose...</option>
               <option>...</option>
             </select>
           </div>
-          <div class="col-md-4">
-            <label for="validationCustom02" class="form-label">Customer name</label>
-            <input type="text" class="form-control" id="" value="Otto" required>
+          <div class="col-md-2">
+            <label for="validationCustom02" class="form-label">Product name</label>
+            <input type="text" class="form-control" id="" value="Munchee" required>
           </div>
-        </div>
-        <div class="col-md-2">
-          <label for="validationCustom04" class="form-label">Product ID</label>
-          <select class="form-select" id="" required>
-            <option selected disabled value="">Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <label for="validationCustom02" class="form-label">Product name</label>
-          <input type="text" class="form-control" id="" value="Munchee" required>
-        </div>
-        <div class="col-md-2">
-          <label for="validationCustom02" class="form-label">Product Type</label>
-          <input type="text" class="form-control" id="" value="Biscuit" required>
-        </div>  
-        <div class="col-md-2">
-          <label for="validationCustom02" class="form-label">QTY</label>
-          <input type="text" class="form-control" id="" value="10" required>
-        </div>
-        <div class="col-md-2">
-          <label for="validationCustom02" class="form-label">Price</label>
-          <input type="text" class="form-control" id="" value="200" required>
-        </div>
-      </form>
-    </div>
-    <div class="div-table">
-      <table class="custom-table table table-striped table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">Order ID</th>
-            <th scope="col">Customer Name</th>
-            <th scope="col">Product Name</th>
-            <th scope="col">Product Type</th>
-            <th scope="col">QTY</th>
-            <th scope="col">Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">O001</th>
-            <td>Roshen</td>
-            <td>Munchee</td>
-            <td>Biscuit</td>
-            <td>100</td>
-            <td>580</td>
-          </tr>
-          <tr>
-            <th scope="row">O001</th>
-            <td>Roshen</td>
-            <td>Munchee</td>
-            <td>Biscuit</td>
-            <td>100</td>
-            <td>580</td>
-          </tr>
-          <tr>
-            <th scope="row">O001</th>
-            <td>Roshen</td>
-            <td>Munchee</td>
-            <td>Biscuit</td>
-            <td>100</td>
-            <td>580</td>
-          </tr>
-        </tbody>
-      </table>
+          <div class="col-md-2">
+            <label for="validationCustom02" class="form-label">Product Type</label>
+            <input type="text" class="form-control" id="" value="Biscuit" required>
+          </div>  
+          <div class="col-md-2">
+            <label for="validationCustom02" class="form-label">QTY</label>
+            <input type="text" class="form-control" id="" value="10" required>
+          </div>
+          <div class="col-md-2">
+            <label for="validationCustom02" class="form-label">Price</label>
+            <input type="text" class="form-control" id="" value="200" required>
+          </div>
+        </form>
+      </div>
+      <div class="div-table">
+        <table class="neworder-custom-table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Order ID</th>
+              <th scope="col">Customer Name</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Product Type</th>
+              <th scope="col">QTY</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">O001</th>
+              <td>Roshen</td>
+              <td>Munchee</td>
+              <td>Biscuit</td>
+              <td>100</td>
+              <td>580</td>
+            </tr>
+            <tr>
+              <th scope="row">O001</th>
+              <td>Roshen</td>
+              <td>Munchee</td>
+              <td>Biscuit</td>
+              <td>100</td>
+              <td>580</td>
+            </tr>
+            <tr>
+              <th scope="row">O001</th>
+              <td>Roshen</td>
+              <td>Munchee</td>
+              <td>Biscuit</td>
+              <td>100</td>
+              <td>580</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
