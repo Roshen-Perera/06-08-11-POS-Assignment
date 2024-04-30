@@ -43,7 +43,7 @@
             margin: auto;
         }
 
-        #custom-user{
+        #login-custom-user{
             width: 330px;
             height: 60px;
             border: 4px solid #32008E;
@@ -53,7 +53,7 @@
             position: absolute;
         }
 
-        #custom-pw{
+        #login-custom-pw{
             width: 330px;
             height: 60px;
             border: 4px solid #32008E;
@@ -63,7 +63,7 @@
             position: absolute;
         }
 
-        #btn{
+        #login-btn{
             background-color: #32008E;
             left: 180px;
             top: 360px;
@@ -87,26 +87,25 @@
     </style>
 </head>
 <body>
-    <main>
+    <div id="login-page">
         <div class="area">
             <div class="img">
                 <img src="assets/images/pos.png" alt="" width="120" height="50">
             </div>
-            
             <form>
                 <div class="col-md-6">
-                    <input id="custom-user" type="text" class="form-control" id="inputName" placeholder="Enter Your Name">
+                    <input id="login-custom-user" type="text" class="form-control" id="inputName" placeholder="Enter Your Name">
                 </div>
                 <div>
-                    <input id="custom-pw" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Enter Your password">
+                    <input id="login-custom-pw" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Enter Your password">
                 </div>
-                <a href="dashboard.html"><button id = "btn" type="button" class="btn btn-primary btn-lg">Sign in</button></a>    
+                <a href="dashboard.html"><button id = "btn" type="login-button" class="btn btn-primary btn-lg">Sign in</button></a>    
             </form>
             <div class="else">
                 <p class="else-label">Don't have an Account ?</p>
                 <a class="else-link" href="register.html">Sign Up</a>
             </div>
         </div>
-    </main>
+    </div>
 </body>
 </html>

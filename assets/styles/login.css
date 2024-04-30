@@ -1,0 +1,61 @@
+.img{
+    left: 165px;
+    top: 50px;
+    position: absolute;
+}
+
+.area{
+    width: 450px;
+    height: 530px;
+    background-color: rgba(255, 255, 255, 0.486);
+    position: absolute;
+    border-radius: 30px 30px 30px 30px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#login-custom-user{
+    width: 330px;
+    height: 60px;
+    border: 4px solid #32008E;
+    border-radius: 10px 10px 10px 10px;
+    left: 60px;
+    top: 160px;
+    position: absolute;
+}
+
+#login-custom-pw{
+    width: 330px;
+    height: 60px;
+    border: 4px solid #32008E;
+    border-radius: 10px 10px 10px 10px;
+    left: 60px;
+    top: 240px;
+    position: absolute;
+}
+
+#login-btn{
+    background-color: #32008E;
+    left: 180px;
+    top: 360px;
+    position: absolute;
+}
+
+.else-label{
+    left: 100px;
+    top: 495px;
+    position: absolute;
+}
+
+.else-link{
+    left: 275px;
+    top: 495px;
+    position: absolute;
+    text-decoration: none;
+    color: #32008E;
+    font-weight: bolder;
+}
