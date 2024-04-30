@@ -72,7 +72,7 @@
         color: white;
         border-radius: 10px 10px 10px 10px;
         }
-
+ 
         span{
           cursor: pointer;
         }
@@ -86,6 +86,43 @@
     <link rel="stylesheet" href="assets/styles/neworder.css">
 </head>
 <body>
+  <div id="navigation">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="dashboard.html">
+          <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <span id="dashboard-nav" class="nav-link" aria-current="page">Home</span>
+              </li>
+              <li class="nav-item">
+                <span id="customer-nav" class=" nav-link" aria-current="page">Customers</span>
+              </li>
+              <li class="nav-item">
+                <span id="product-nav" class="nav-link" aria-current="page">Products</span>
+              </li>
+              <li class="nav-item">
+                <span id="order-nav" class="nav-link" aria-current="page">Orders</span>
+              </li>
+              <li class="nav-item">
+                <span id="logout-nav" class="nav-link custom-nav" aria-current="page">Logout</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
     <div id="login-page">
       <div class="area">
           <div class="img">
@@ -98,7 +135,7 @@
               <div>
                   <input id="login-custom-pw" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Enter Your password">
               </div>
-              <a href="dashboard.html"><button id = "login-btn" type="login-button" class="btn btn-primary btn-lg">Sign in</button></a>    
+              <span id = "login-btn" type="login-button" class="btn btn-primary btn-lg">Sign in</span>  
           </form>
           <div class="else">
               <p class="else-label">Don't have an Account ?</p>
@@ -122,50 +159,16 @@
               <div>
                   <input id="reg-custom-pw" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Enter Your password">
               </div>
-              <button id = "reg-btn" type="button" class="btn btn-primary btn-lg">Register</button>
+              <span id = "reg-btn" type="button" class="btn btn-primary btn-lg">Register</span>
           </form>
           <div class="else">
               <p class="reg-else-label">Already have an Account ?</p>
-              <span id="login-link" class="reg-else-link">Sign In</span>
+              <div id="login-link" class="reg-else-link">Sign In</span>
           </div>
+      </div>
       </div>
     </div>
     <div id="dashboard-page">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="dashboard.html">
-            <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <span id="dashboard-nav" class="nav-link" aria-current="page">Home</span>
-                </li>
-                <li class="nav-item">
-                  <span id="customer-nav" class=" nav-link" aria-current="page">Customers</span>
-                </li>
-                <li class="nav-item">
-                  <span id="product-nav" class="nav-link" aria-current="page">Products</span>
-                </li>
-                <li class="nav-item">
-                  <span id="order-nav" class="nav-link" aria-current="page">Orders</span>
-                </li>
-                <li class="nav-item">
-                  <span id="logout-nav" class="nav-link custom-nav" aria-current="page">Logout</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </nav>
     <div class="pane">
       <div class="card-group">
         <div class="card">
@@ -241,40 +244,6 @@
     </div>
     </div>
     <div id="customer-page">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="dashboard.html">
-            <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <span id="dashboard-nav" class="nav-link" aria-current="page">Home</span>
-                </li>
-                <li class="nav-item">
-                  <span id="customer-nav" class=" nav-link" aria-current="page">Customers</span>
-                </li>
-                <li class="nav-item">
-                  <span id="product-nav" class="nav-link" aria-current="page">Products</span>
-                </li>
-                <li class="nav-item">
-                  <span id="order-nav" class="nav-link" aria-current="page">Orders</span>
-                </li>
-                <li class="nav-item">
-                  <span id="logout-nav" class="nav-link custom-nav" aria-current="page">Logout</span>                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </nav>
         <div class="pane">
           <section>
             <form class="form">
@@ -351,40 +320,6 @@
         </div>
     </div>
     <div id="product-page">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="dashboard.html">
-            <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <span id="dashboard-nav" class="nav-link" aria-current="page">Home</span>
-                </li>
-                <li class="nav-item">
-                  <span id="customer-nav" class=" nav-link" aria-current="page">Customers</span>
-                </li>
-                <li class="nav-item">
-                  <span id="product-nav" class="nav-link" aria-current="page">Products</span>
-                </li>
-                <li class="nav-item">
-                  <span id="order-nav" class="nav-link" aria-current="page">Orders</span>
-                </li>
-                <li class="nav-item">
-                  <span id="logout-nav" class="nav-link custom-nav" aria-current="page">Logout</span>                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </nav>
         <div class="pane">
           <form>
             <div class="col-md-6">
@@ -473,40 +408,6 @@
         </div>
     </div>
     <div id="order-page">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="dashboard.html">
-            <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <span id="dashboard-nav" class="nav-link" aria-current="page">Home</span>
-                </li>
-                <li class="nav-item">
-                  <span id="customer-nav" class=" nav-link" aria-current="page">Customers</span>
-                </li>
-                <li class="nav-item">
-                  <span id="product-nav" class="nav-link" aria-current="page">Products</span>
-                </li>
-                <li class="nav-item">
-                  <span id="order-nav" class="nav-link" aria-current="page">Orders</span>
-                </li>
-                <li class="nav-item">
-                  <span id="logout-nav" class="nav-link custom-nav" aria-current="page">Logout</span>                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </nav>
       <div class="pane">
         <table class="order-custom-table table table-striped table-bordered">
           <thead>
@@ -554,40 +455,6 @@
       </div>
     </div>
     <div id="neworder-page">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="dashboard.html">
-            <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <img src="assets/images/pos.png" alt="Bootstrap" width="100px" height="40px">
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <span id="dashboard-nav" class="nav-link" aria-current="page">Home</span>
-                </li>
-                <li class="nav-item">
-                  <span id="customer-nav" class=" nav-link" aria-current="page">Customers</span>
-                </li>
-                <li class="nav-item">
-                  <span id="product-nav" class="nav-link" aria-current="page">Products</span>
-                </li>
-                <li class="nav-item">
-                  <span id="order-nav" class="nav-link" aria-current="page">Orders</span>
-                </li>
-                <li class="nav-item">
-                  <span id="logout-nav" class="nav-link custom-nav" aria-current="page">Logout</span>                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </nav>
       <div class="pane">
         <div class="detail">
           <form class="row g-3 needs-validation" novalidate>
@@ -684,6 +551,7 @@
     <script src="assets/lib/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
+        $("#navigation").css({display: "none"});
         $("#login-page").css({display: "block"});
         $("#register-page").css({display: "none"});
         $("#dashboard-page").css({display: "none"});
@@ -693,6 +561,7 @@
         $("#neworder-page").css({display: "none"});
 
         $('#login-btn').on('click', () => {
+            $("#navigation").css({display: "block"});
             $("#login-page").css({display: "none"});
             $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "block"});
@@ -703,6 +572,8 @@
         });
 
         $('#reg-link').on('click', () => {
+          
+          $("#navigation").css({display: "none"});
             $("#login-page").css({display: "none"});
             $("#register-page").css({display: "block"});
             $("#dashboard-page").css({display: "none"});
@@ -713,6 +584,7 @@
         });
 
         $('#login-link').on('click', () => {
+            $("#navigation").css({display: "none"});
             $("#login-page").css({display: "block"});
             $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
@@ -723,6 +595,7 @@
         });
 
         $('#dashboard-nav').on('click', () => {
+            $("#navigation").css({display: "block"});
             $("#login-page").css({display: "none"});
             $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "block"});
@@ -732,6 +605,7 @@
             $("#neworder-page").css({display: "none"});
         });
         $('#customer-nav').on('click', () => {
+            $("#navigation").css({display: "block"});
             $("#login-page").css({display: "none"});
             $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
@@ -741,6 +615,7 @@
             $("#neworder-page").css({display: "none"});
         });
         $('#product-nav').on('click', () => {
+            $("#navigation").css({display: "block"});
             $("#login-page").css({display: "none"});
             $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
@@ -750,6 +625,7 @@
             $("#neworder-page").css({display: "none"});
         });
         $('#order-nav').on('click', () => {
+            $("#navigation").css({display: "block"});
             $("#login-page").css({display: "none"});
             $("#register-page").css({display: "none"});
             $("#register-page").css({display: "none"});
@@ -760,6 +636,7 @@
             $("#neworder-page").css({display: "none"});
         });
         $('#logout-nav').on('click', () => {
+            $("#navigation").css({display: "none"});
             $("#login-page").css({display: "block"});
             $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
@@ -769,6 +646,7 @@
             $("#neworder-page").css({display: "none"});
         });
         $('#neworder-btn').on('click', () => {
+            $("#navigation").css({display: "block"});
             $("#login-page").css({display: "none"});
             $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
