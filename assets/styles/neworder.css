@@ -73,6 +73,12 @@
     border-radius: 10px 10px 10px 10px;
   }
 
+  .custom-place{
+    background-color: white;
+    color: #32008E;
+
+  }
+
   @media all and (max-width: 768px) {
     .neworder-custom-table{
       width: 80vw;
