@@ -72,6 +72,10 @@
         color: white;
         border-radius: 10px 10px 10px 10px;
         }
+
+        span{
+          cursor: pointer;
+        }
     </style>
     <link rel="stylesheet" href="assets/styles/login.css">
     <link rel="stylesheet" href="assets/styles/register.css">
@@ -98,7 +102,31 @@
           </form>
           <div class="else">
               <p class="else-label">Don't have an Account ?</p>
-              <a class="else-link" href="register.html">Sign Up</a>
+              <span id="reg-link" class="else-link">Sign Up</span>
+          </div>
+      </div>
+    </div>
+    <div id="register-page">
+      <div class="area">
+          <div class="img">
+              <img src="assets/images/pos.png" alt="" width="120" height="50">
+          </div>
+          
+          <form>
+              <div class="col-md-6">
+                  <input id="reg-custom-user" type="text" class="form-control" id="inputName" placeholder="Enter Your Name">
+              </div>
+              <div class="mb-3">
+                  <input id="reg-custom-email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter you Email Address">
+              </div>
+              <div>
+                  <input id="reg-custom-pw" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Enter Your password">
+              </div>
+              <button id = "reg-btn" type="button" class="btn btn-primary btn-lg">Register</button>
+          </form>
+          <div class="else">
+              <p class="reg-else-label">Already have an Account ?</p>
+              <span id="login-link" class="reg-else-link">Sign In</span>
           </div>
       </div>
     </div>
@@ -656,7 +684,8 @@
     <script src="assets/lib/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-        $("#login-page").css({display: "none"});
+        $("#login-page").css({display: "block"});
+        $("#register-page").css({display: "none"});
         $("#dashboard-page").css({display: "none"});
         $("#customer-page").css({display: "none"});
         $("#product-page").css({display: "none"});
@@ -665,7 +694,28 @@
 
         $('#login-btn').on('click', () => {
             $("#login-page").css({display: "none"});
+            $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "block"});
+            $("#customer-page").css({display: "none"});
+            $("#product-page").css({display: "none"});
+            $("#order-page").css({display: "none"});
+            $("#neworder-page").css({display: "none"});
+        });
+
+        $('#reg-link').on('click', () => {
+            $("#login-page").css({display: "none"});
+            $("#register-page").css({display: "block"});
+            $("#dashboard-page").css({display: "none"});
+            $("#customer-page").css({display: "none"});
+            $("#product-page").css({display: "none"});
+            $("#order-page").css({display: "none"});
+            $("#neworder-page").css({display: "none"});
+        });
+
+        $('#login-link').on('click', () => {
+            $("#login-page").css({display: "block"});
+            $("#register-page").css({display: "none"});
+            $("#dashboard-page").css({display: "none"});
             $("#customer-page").css({display: "none"});
             $("#product-page").css({display: "none"});
             $("#order-page").css({display: "none"});
@@ -674,6 +724,7 @@
 
         $('#dashboard-nav').on('click', () => {
             $("#login-page").css({display: "none"});
+            $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "block"});
             $("#customer-page").css({display: "none"});
             $("#product-page").css({display: "none"});
@@ -682,6 +733,7 @@
         });
         $('#customer-nav').on('click', () => {
             $("#login-page").css({display: "none"});
+            $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
             $("#customer-page").css({display: "block"});
             $("#product-page").css({display: "none"});
@@ -690,6 +742,7 @@
         });
         $('#product-nav').on('click', () => {
             $("#login-page").css({display: "none"});
+            $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
             $("#customer-page").css({display: "none"});
             $("#product-page").css({display: "block"});
@@ -698,6 +751,8 @@
         });
         $('#order-nav').on('click', () => {
             $("#login-page").css({display: "none"});
+            $("#register-page").css({display: "none"});
+            $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
             $("#customer-page").css({display: "none"});
             $("#product-page").css({display: "none"});
@@ -706,6 +761,7 @@
         });
         $('#logout-nav').on('click', () => {
             $("#login-page").css({display: "block"});
+            $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
             $("#customer-page").css({display: "none"});
             $("#product-page").css({display: "none"});
@@ -714,6 +770,7 @@
         });
         $('#neworder-btn').on('click', () => {
             $("#login-page").css({display: "none"});
+            $("#register-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
             $("#customer-page").css({display: "none"});
             $("#product-page").css({display: "none"});

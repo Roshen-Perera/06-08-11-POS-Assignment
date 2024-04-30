@@ -1,0 +1,71 @@
+.img{
+    left: 165px;
+    top: 50px;
+    position: absolute;
+}
+
+.area{
+    width: 450px;
+    height: 530px;
+    background-color: rgba(255, 255, 255, 0.486);
+    position: absolute;
+    border-radius: 30px 30px 30px 30px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#reg-custom-user{
+    width: 330px;
+    height: 60px;
+    border: 4px solid #32008E;
+    border-radius: 10px 10px 10px 10px;
+    left: 60px;
+    top: 140px;
+    position: absolute;
+}
+
+#reg-custom-email{
+    width: 330px;
+    height: 60px;
+    border: 4px solid #32008E;
+    border-radius: 10px 10px 10px 10px;
+    left: 60px;
+    top: 220px;
+    position: absolute;
+}
+
+#reg-custom-pw{
+    width: 330px;
+    height: 60px;
+    border: 4px solid #32008E;
+    border-radius: 10px 10px 10px 10px;
+    left: 60px;
+    top: 300px;
+    position: absolute;
+}
+
+#reg-btn{
+    background-color: #32008E;
+    left: 170px;
+    top: 400px;
+    position: absolute;
+}
+
+.reg-else-label{
+    left: 90px;
+    top: 495px;
+    position: absolute;
+}
+
+.reg-else-link{
+    left: 285px;
+    top: 495px;
+    position: absolute;
+    text-decoration: none;
+    color: #32008E;
+    font-weight: bolder;
+}
