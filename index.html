@@ -76,6 +76,7 @@
     <link rel="stylesheet" href="assets/styles/dashboard.css">
     <link rel="stylesheet" href="assets/styles/customer.css">
     <link rel="stylesheet" href="assets/styles/product.css">
+    <link rel="stylesheet" href="assets/styles/order.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -103,7 +104,7 @@
                   <span id="product-nav" class="nav-link" aria-current="page">Products</span>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="">Orders</a>
+                  <span id="order-nav" class="nav-link" aria-current="page" href="">Orders</span>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link custom-nav" aria-current="page" href="">Logout</a>
@@ -351,28 +352,85 @@
             </table>
           </div>
         </div>
+    </div>
+    <div id="order-page">
+      <div class="pane">
+        <table class="order-custom-table table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Order ID</th>
+              <th scope="col">Customer Name</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Product Type</th>
+              <th scope="col">QTY</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">O001</th>
+              <td>Roshen</td>
+              <td>Munchee</td>
+              <td>Biscuit</td>
+              <td>100</td>
+              <td>580</td>
+            </tr>
+            <tr>
+              <th scope="row">O001</th>
+              <td>Roshen</td>
+              <td>Munchee</td>
+              <td>Biscuit</td>
+              <td>100</td>
+              <td>580</td>
+            </tr>
+            <tr>
+              <th scope="row">O001</th>
+              <td>Roshen</td>
+              <td>Munchee</td>
+              <td>Biscuit</td>
+              <td>100</td>
+              <td>580</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="order-custom-btn">
+          <a href="neworder.html"><button class="btn btn-primary" type="button">New Order</button></a>
+          <button class="btn btn-primary" type="button">Delete</button>
+          <button class="btn btn-primary" type="button">Update</button>
+        </div>
+      </div>
     </div> 
     <script src="assets/lib/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
+        $("#dashboard-page").css({display: "none"});
         $("#customer-page").css({display: "none"});
         $("#product-page").css({display: "none"});
-        $("#dashboard-page").css({display: "none"});
+        $("#order-page").css({display: "none"});
 
         $('#dashboard-nav').on('click', () => {
             $("#dashboard-page").css({display: "block"});
             $("#customer-page").css({display: "none"});
             $("#product-page").css({display: "none"});
-        })
+            $("#order-page").css({display: "none"});
+        });
         $('#customer-nav').on('click', () => {
+            $("#dashboard-page").css({display: "none"});
             $("#customer-page").css({display: "block"});
             $("#product-page").css({display: "none"});
-            $("#dashboard-page").css({display: "none"});
-        })
+            $("#order-page").css({display: "none"});
+        });
         $('#product-nav').on('click', () => {
-            $("#product-page").css({display: "block"});
-            $("#customer-page").css({display: "none"});
             $("#dashboard-page").css({display: "none"});
+            $("#customer-page").css({display: "none"});
+            $("#product-page").css({display: "block"});
+            $("#order-page").css({display: "none"});
+        });
+        $('#order-nav').on('click', () => {
+            $("#dashboard-page").css({display: "none"});
+            $("#customer-page").css({display: "none"});
+            $("#product-page").css({display: "none"});
+            $("#order-page").css({display: "block"});
         });
     </script>
 </body>
