@@ -34,7 +34,7 @@
     border: 4px solid #32008E;
     border-radius: 10px 10px 10px 10px;
 
-    top: 280px;
+    top: 320px;
     left: 0;
     right: 0;
   }
@@ -88,13 +88,13 @@
 
     .custom-place{
       position: absolute;
-      right: 1px;
-      bottom: -300px;
+      right: 100px;
+      bottom: 50px;
     }
   
     .custom-add{
       position: absolute;
-      right: 40px;
-      bottom: -38px;
+      right: 250px;
+      bottom: 50px;
     }
   }
