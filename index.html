@@ -275,10 +275,10 @@
           <button id="btn" type="button" class="btn btn-primary btn-lg">Search</button>
         </form>
         <div class="cus-custom-btn">
-          <button class="btn btn-primary" type="button">Add</button>
-          <button class="btn btn-primary" type="button">Delete</button>
-          <button class="btn btn-primary" type="button">Update</button>
-          <button class="btn btn-primary" type="button">Clear</button>
+          <button id="customer-add-btn" class="btn btn-primary" type="button">Add</button>
+          <button id="customer-delete-btn" class="btn btn-primary" type="button">Delete</button>
+          <button id="customer-update-btn" class="btn btn-primary" type="button">Update</button>
+          <button id="customer-clear-btn" class="btn btn-primary" type="button">Clear</button>
         </div>
       </section>
       <section>
@@ -292,37 +292,7 @@
                 <th scope="col">Email Address</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
+            <tbody id="customer-table">
             </tbody>
           </table>
         </div>
@@ -353,10 +323,10 @@
         <button id="btn" type="button" class="btn btn-primary btn-lg">Search</button>
       </form>
       <div class="pro-custom-btn">
-        <button class="btn btn-primary" type="button">Add</button>
-        <button class="btn btn-primary" type="button">Delete</button>
-        <button class="btn btn-primary" type="button">Update</button>
-        <button class="btn btn-primary" type="button">Clear</button>
+        <button id="customer-add-btn" class="btn btn-primary" type="button">Add</button>
+        <button id="customer-delete-btn" class="btn btn-primary" type="button">Delete</button>
+        <button id="customer-update-btn" class="btn btn-primary" type="button">Update</button>
+        <button id="customer-clear-btn" class="btn btn-primary" type="button">Clear</button>
       </div>
       <div class="div-table">
         <table class="pro-custom-table table table-striped table-bordered">
@@ -673,6 +643,7 @@
       $("#neworder-page").css({ display: "block" });
     });
   </script>
+  <script src="assets/scripts/customer.js"></script>
 </body>
 
 </html>
