@@ -323,10 +323,10 @@
         <button id="btn" type="button" class="btn btn-primary btn-lg">Search</button>
       </form>
       <div class="pro-custom-btn">
-        <button id="customer-add-btn" class="btn btn-primary" type="button">Add</button>
-        <button id="customer-delete-btn" class="btn btn-primary" type="button">Delete</button>
-        <button id="customer-update-btn" class="btn btn-primary" type="button">Update</button>
-        <button id="customer-clear-btn" class="btn btn-primary" type="button">Clear</button>
+        <button id="product-add-btn" class="btn btn-primary" type="button">Add</button>
+        <button id="product-delete-btn" class="btn btn-primary" type="button">Delete</button>
+        <button id="product-update-btn" class="btn btn-primary" type="button">Update</button>
+        <button id="product-clear-btn" class="btn btn-primary" type="button">Clear</button>
       </div>
       <div class="div-table">
         <table class="pro-custom-table table table-striped table-bordered">
@@ -339,49 +339,7 @@
               <th scope="col">Price</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Munchee</td>
-              <td>Biscuit</td>
-              <td>100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Munchee</td>
-              <td>Biscuit</td>
-              <td>100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Munchee</td>
-              <td>Biscuit</td>
-              <td>100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Munchee</td>
-              <td>Biscuit</td>
-              <td>100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Munchee</td>
-              <td>Biscuit</td>
-              <td>100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Munchee</td>
-              <td>Biscuit</td>
-              <td>100</td>
-              <td>100</td>
-            </tr>
+          <tbody id="product-table">
           </tbody>
         </table>
       </div>
@@ -643,7 +601,8 @@
       $("#neworder-page").css({ display: "block" });
     });
   </script>
-  <script src="assets/scripts/customer.js"></script>
+  <script src="assets/js/customer.js"></script>
+  <script src="assets/js/product.js"></script>
 </body>
 
 </html>
