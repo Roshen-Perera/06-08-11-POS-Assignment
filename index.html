@@ -159,14 +159,14 @@
 
       <form>
         <div class="col-md-6">
-          <input id="reg-custom-user" type="text" class="form-control" id="inputName" placeholder="Enter Your Name">
+          <input id="reg-custom-user" type="text" class="form-control" id="inputUserName" placeholder="Enter Your Name">
         </div>
         <div class="mb-3">
           <input id="reg-custom-email" type="email" class="form-control" id="exampleInputEmail1"
             aria-describedby="emailHelp" placeholder="Enter you Email Address">
         </div>
         <div>
-          <input id="reg-custom-pw" type="password" id="inputPassword5" class="form-control"
+          <input id="reg-custom-pw" type="password" id="inputPassword" class="form-control"
             aria-describedby="passwordHelpBlock" placeholder="Enter Your password">
         </div>
         <span id="reg-btn" type="button" class="btn btn-primary btn-lg">Register</span>
@@ -272,7 +272,7 @@
           <div class="col-md-6 col-sm-12">
             <input id="cus-custom-search" type="text" class="form-control" placeholder="Search">
           </div>
-          <button id="btn" type="button" class="btn btn-primary btn-lg">Search</button>
+          <button class="btn" id="btnSearchCustomer" type="button" class="btn btn-primary btn-lg">Search</button>
         </form>
         <div class="cus-custom-btn">
           <button id="customer-add-btn" class="btn btn-primary" type="button">Add</button>
@@ -303,24 +303,24 @@
     <div class="pane">
       <form>
         <div class="col-md-6">
-          <input id="pro-custom-id" type="text" class="form-control" id="inputName" placeholder="ID">
+          <input id="pro-custom-id" type="text" class="form-control" placeholder="ID">
         </div>
         <div class="col-md-6">
-          <input id="pro-custom-name" type="text" class="form-control" id="inputName" placeholder="Product Name">
+          <input id="pro-custom-name" type="text" class="form-control" placeholder="Product Name">
         </div>
         <div class="col-md-6">
-          <input id="pro-custom-type" type="text" class="form-control" id="inputName" placeholder="Product Type">
+          <input id="pro-custom-type" type="text" class="form-control" placeholder="Product Type">
         </div>
         <div class="col-md-6">
-          <input id="pro-custom-qty" type="text" class="form-control" id="inputName" placeholder="QTY">
+          <input id="pro-custom-qty" type="text" class="form-control" placeholder="QTY">
         </div>
         <div class="col-md-6">
-          <input id="pro-custom-price" type="text" class="form-control" id="inputName" placeholder="Price">
+          <input id="pro-custom-price" type="text" class="form-control" placeholder="Price">
         </div>
         <div class="col-md-6">
-          <input id="pro-custom-search" type="text" class="form-control" id="inputName" placeholder="Search">
+          <input id="pro-custom-search" type="text" class="form-control" placeholder="Search">
         </div>
-        <button id="btn" type="button" class="btn btn-primary btn-lg">Search</button>
+        <button class="btn" type="button" class="btn btn-primary btn-lg">Search</button>
       </form>
       <div class="pro-custom-btn">
         <button id="product-add-btn" class="btn btn-primary" type="button">Add</button>
@@ -398,49 +398,49 @@
         <form class="row g-3 needs-validation" novalidate>
           <div class="row g-3">
             <div class="col-md-3">
-              <label for="inputEmail4" class="form-label">Order ID: </label>
-              <label for="inputEmail4" class="form-label cus-label">O001</label>
+              <label class="form-label">Order ID: </label>
+              <label class="form-label cus-label">O001</label>
             </div>
             <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Order Date: </label>
-              <label for="inputEmail4" class="form-label cus-label">03/03/2024</label>
+              <label class="form-label">Order Date: </label>
+              <label class="form-label cus-label">03/03/2024</label>
             </div>
           </div>
           <div class="row g-3">
             <div class="col-md-3">
-              <label for="validationCustom04" class="form-label">Customer ID</label>
-              <select class="form-select" id="" required>
+              <label for="validationCustomerID" class="form-label">Customer ID</label>
+              <select class="form-select" id="validationCustomerID" required>
                 <option selected disabled value="">Choose...</option>
                 <option>...</option>
               </select>
             </div>
             <div class="col-md-4">
-              <label for="validationCustom02" class="form-label">Customer name</label>
-              <input type="text" class="form-control" id="" value="Otto" required>
+              <label for="validationCustomerName" class="form-label">Customer name</label>
+              <input type="text" class="form-control" id="validationCustomerName" value="Otto" required>
             </div>
           </div>
           <div class="col-md-2">
-            <label for="validationCustom04" class="form-label">Product ID</label>
-            <select class="form-select" id="" required>
+            <label for="validationProductID" class="form-label">Product ID</label>
+            <select class="form-select" id="validationProductID" required>
               <option selected disabled value="">Choose...</option>
               <option>...</option>
             </select>
           </div>
           <div class="col-md-2">
-            <label for="validationCustom02" class="form-label">Product name</label>
-            <input type="text" class="form-control" id="" value="Munchee" required>
+            <label for="validationProductName" class="form-label">Product name</label>
+            <input type="text" class="form-control" id="validationProductName" value="Munchee" required>
           </div>
           <div class="col-md-2">
-            <label for="validationCustom02" class="form-label">Product Type</label>
-            <input type="text" class="form-control" id="" value="Biscuit" required>
+            <label for="validationProductType" class="form-label">Product Type</label>
+            <input type="text" class="form-control" id="validationProductType" value="Biscuit" required>
           </div>
           <div class="col-md-2">
-            <label for="validationCustom02" class="form-label">QTY</label>
-            <input type="text" class="form-control" id="" value="10" required>
+            <label for="validationProductQTY" class="form-label">QTY</label>
+            <input type="text" class="form-control" id="validationProductQTY" value="10" required>
           </div>
           <div class="col-md-2">
-            <label for="validationCustom02" class="form-label">Price</label>
-            <input type="text" class="form-control" id="" value="200" required>
+            <label for="validationProductPrice" class="form-label">Price</label>
+            <input type="text" class="form-control" id="validationProductPrice" value="200" required>
           </div>
           <div class="col-auto">
             <button type="submit" class="btn btn-primary mb-3">Add to Cart</button>

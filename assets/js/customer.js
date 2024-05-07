@@ -62,6 +62,21 @@ $("#customer-table").on('click', 'tr',function()  {
     // console.log(address);
 });
 
+$("#customer-update-btn").on('click', () => {
+    var customerId = $('#cus-custom-id').val();
+    var customerName = $('#cus-custom-user').val();
+    var customerAddress = $('#cus-custom-address').val();
+    var customerEmail = $('#cus-custom-email').val();
+
+    let cusObj = customers[recordIndex];
+    cusObj.cusId = customerId;
+    cusObj.cusName = customerName;
+    cusObj.cusAddress = customerAddress;
+    cusObj.cusEmail = customerEmail;
+
+    loadTable();
+});
+
 $('#customer-delete-btn').on('click', () => {
     customers.splice(recordIndex, 1);
     loadTableCustomer();

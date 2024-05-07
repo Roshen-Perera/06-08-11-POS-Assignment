@@ -48,11 +48,9 @@
     position: absolute;
 }
 
-#btn{
+.btn{
     background-color: #32008E;
-    left: 240px;
-    top: 126px;
-    position: absolute;
+    color: #FFFFFF;
 }
 
 .cus-custom-table{
