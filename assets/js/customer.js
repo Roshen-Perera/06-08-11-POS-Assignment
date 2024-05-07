@@ -6,13 +6,13 @@ $('#customer-add-btn').on('click', () => {
     var customerId = $('#cus-custom-id').val();
     var customerName = $('#cus-custom-user').val();
     var customerAddress = $('#cus-custom-address').val();
-    var customerEmail = $('#cus-custom-email').val();
+    var customerMobile = $('#cus-custom-email').val();
 
     var record = `<tr>
                             <td class="cus_id" scope="row">${customerId}</td>     
                             <td class="cus_name">${customerName}</td>
                             <td class="cus_address">${customerAddress}</td>     
-                            <td class="cus_email">${customerEmail}</td>
+                            <td class="cus_email">${customerMobile}</td>
                         </tr>`
     $('#customer-table').append(record);
 
@@ -20,7 +20,7 @@ $('#customer-add-btn').on('click', () => {
         cusId: customerId,
         cusName: customerName,
         cusAddress: customerAddress,
-        cusEmail: customerEmail
+        cusMoblie: customerMobile
     }
 
     customers.push(customer)
@@ -35,7 +35,7 @@ function loadTableCustomer(){
                             <td class="cus_id" scope="row">${item.cusId}</td>     
                             <td class="cus_name">${item.cusName}</td>
                             <td class="cus_address">${item.cusAddress}</td>     
-                            <td class="cus_email">${item.cusEmail}</td>
+                            <td class="cus_email">${item.cusMoblie}</td>
                         </tr>`
         $('#customer-table').append(record);
     });
@@ -49,12 +49,12 @@ $("#customer-table").on('click', 'tr',function()  {
     let customerId = $(this).find(".cus_id").text();
     let customerName = $(this).find(".cus_name").text();
     let customerAddress = $(this).find(".cus_address").text();
-    let customerEmail = $(this).find(".cus_email").text();
+    let customerMobile = $(this).find(".cus_email").text();
 
     $("#cus-custom-id").val(customerId);
     $("#cus-custom-user").val(customerName);
     $("#cus-custom-address").val(customerAddress);
-    $("#cus-custom-email").val(customerEmail);
+    $("#cus-custom-email").val(customerMobile);
 
     // console.log(id);
     // console.log(fName);
@@ -66,13 +66,13 @@ $("#customer-update-btn").on('click', () => {
     var customerId = $('#cus-custom-id').val();
     var customerName = $('#cus-custom-user').val();
     var customerAddress = $('#cus-custom-address').val();
-    var customerEmail = $('#cus-custom-email').val();
+    var customerMobile = $('#cus-custom-email').val();
 
     let cusObj = customers[recordIndex];
     cusObj.cusId = customerId;
     cusObj.cusName = customerName;
     cusObj.cusAddress = customerAddress;
-    cusObj.cusEmail = customerEmail;
+    cusObj.cusMoblie = customerMobile;
 
     loadTable();
 });
