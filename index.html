@@ -267,7 +267,7 @@
             <input id="cus-custom-address" type="text" class="form-control" placeholder="Address">
           </div>
           <div class="col-md-6 col-sm-12">
-            <input id="cus-custom-email" type="email" class="form-control" placeholder="Email Address">
+            <input id="cus-custom-mobile" type="number" class="form-control" placeholder="Mobile Number">
           </div>
           <div class="col-md-6 col-sm-12">
             <input id="cus-custom-search" type="text" class="form-control" placeholder="Search">
@@ -289,7 +289,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Address</th>
-                <th scope="col">Email Address</th>
+                <th scope="col">Mobile Number</th>
               </tr>
             </thead>
             <tbody id="customer-table">
@@ -601,8 +601,7 @@
       $("#neworder-page").css({ display: "block" });
     });
   </script>
-  <script src="assets/js/customer.js"></script>
-  <script src="assets/js/product.js"></script>
+  <script type="module" src="controller/CustomerController.js"></script>
+  <script type="module" src="controller/ProductController.js"></script>
 </body>
-
 </html>
