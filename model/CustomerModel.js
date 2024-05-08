@@ -1,4 +1,4 @@
-class customerModel {
+export default class CustomerModel {
     get cusId() {
         return this._cusId;
     }
@@ -15,14 +15,6 @@ class customerModel {
         this._cusName = value;
     }
 
-    get cusMobile() {
-        return this._cusMobile;
-    }
-
-    set cusMobile(value) {
-        this._cusMobile = value;
-    }
-
     get cusAddress() {
         return this._cusAddress;
     }
@@ -31,10 +23,17 @@ class customerModel {
         this._cusAddress = value;
     }
 
-    constructor(cusId, cusName, cusMobile, cusAddress){
+    get cusMobile() {
+        return this._cusMobile;
+    }
+
+    set cusMobile(value) {
+        this._cusMobile = value;
+    }
+    constructor(cusId, cusName, cusAddress, cusMobile) {
         this._cusId = cusId;
         this._cusName = cusName;
-        this._cusMobile = cusMobile;
         this._cusAddress = cusAddress;
+        this._cusMobile = cusMobile;
     }
 }

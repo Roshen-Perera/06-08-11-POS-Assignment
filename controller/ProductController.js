@@ -1,4 +1,5 @@
-import {products} from "../db/DB.js";
+import ProductModel from "/model/ProductModel.js";
+import {products} from "/db/DB.js";
 
 var recordIndex = undefined;
 
@@ -18,13 +19,7 @@ $('#product-add-btn').on('click', () => {
                         </tr>`
     $('#product-table').append(record);
 
-    let product = {
-        proId: productId,
-        proName: productName,
-        proType: productType,
-        proQty: productQty,
-        proPrice: productPrice
-    }
+    let product = new ProductModel(productId, productName, productType, productQty, productPrice);
 
     products.push(product)
     loadTableproduct();

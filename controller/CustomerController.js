@@ -1,3 +1,4 @@
+import CustomerModel from "/model/CustomerModel.js"
 import {customers} from "/db/DB.js";
 
 var recordIndex = undefined;
@@ -16,12 +17,7 @@ $('#customer-add-btn').on('click', () => {
                         </tr>`
     $('#customer-table').append(record);
 
-    let customer = {
-        cusId: customerId,
-        cusName: customerName,
-        cusAddress: customerAddress,
-        cusMoblie: customerMobile
-    }
+    let customer = new CustomerModel(customerId, customerName, customerAddress, customerMobile);
 
     customers.push(customer)
     loadTableCustomer();
@@ -32,11 +28,11 @@ function loadTableCustomer(){
     $('#customer-table').empty();
     customers.map((item, index) =>{
         let record = `<tr>
-                            <td class="cus_id" scope="row">${item.cusId}</td>     
-                            <td class="cus_name">${item.cusName}</td>
-                            <td class="cus_address">${item.cusAddress}</td>     
-                            <td class="cus_mobile">${item.cusMoblie}</td>
-                        </tr>`
+                                <td class="cus_id" scope="row">${item.cusId}</td>     
+                                <td class="cus_name">${item.cusName}</td>
+                                <td class="cus_address">${item.cusAddress}</td>     
+                                <td class="cus_mobile">${item.cusMoblie}</td>
+                            </tr>`
         $('#customer-table').append(record);
     });
 }
