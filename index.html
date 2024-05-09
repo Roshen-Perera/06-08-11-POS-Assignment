@@ -159,10 +159,10 @@
 
       <form>
         <div class="col-md-6">
-          <input id="reg-custom-user" type="text" class="form-control" id="inputUserName" placeholder="Enter Your Name">
+          <input id="reg-custom-user" type="text" class="form-control" id="userName" placeholder="Enter Your Name">
         </div>
         <div class="mb-3">
-          <input id="reg-custom-email" type="email" class="form-control" id="exampleInputEmail1"
+          <input id="reg-custom-email" type="email" class="form-control" id="emailAddress"
             aria-describedby="emailHelp" placeholder="Enter you Email Address">
         </div>
         <div>
@@ -408,15 +408,14 @@
           </div>
           <div class="row g-3">
             <div class="col-md-3">
-              <label for="validationCustomerID" class="form-label">Customer ID</label>
-              <select class="form-select" id="validationCustomerID" required>
+              <label for="customerSelectID" class="form-label">Customer ID</label>
+              <select id="customerSelectID" class="form-select" required>
                 <option selected disabled value="">Choose...</option>
-                <option>...</option>
               </select>
             </div>
             <div class="col-md-4">
               <label for="validationCustomerName" class="form-label">Customer name</label>
-              <input type="text" class="form-control" id="validationCustomerName" value="Otto" required>
+              <input type="text" class="form-control" id="validationCustomerName" readonly>
             </div>
           </div>
           <div class="col-md-2">
@@ -505,16 +504,16 @@
     $("#order-page").css({ display: "none" });
     $("#neworder-page").css({ display: "none" });
 
-    $('#login-btn').on('click', () => {
-      $("#navigation").css({ display: "block" });
-      $("#login-page").css({ display: "none" });
-      $("#register-page").css({ display: "none" });
-      $("#dashboard-page").css({ display: "block" });
-      $("#customer-page").css({ display: "none" });
-      $("#product-page").css({ display: "none" });
-      $("#order-page").css({ display: "none" });
-      $("#neworder-page").css({ display: "none" });
-    });
+    // $('#login-btn').on('click', () => {
+    //   $("#navigation").css({ display: "block" });
+    //   $("#login-page").css({ display: "none" });
+    //   $("#register-page").css({ display: "none" });
+    //   $("#dashboard-page").css({ display: "block" });
+    //   $("#customer-page").css({ display: "none" });
+    //   $("#product-page").css({ display: "none" });
+    //   $("#order-page").css({ display: "none" });
+    //   $("#neworder-page").css({ display: "none" });
+    // });
 
     $('#reg-link').on('click', () => {
 
@@ -573,7 +572,6 @@
       $("#navigation").css({ display: "block" });
       $("#login-page").css({ display: "none" });
       $("#register-page").css({ display: "none" });
-      $("#register-page").css({ display: "none" });
       $("#dashboard-page").css({ display: "none" });
       $("#customer-page").css({ display: "none" });
       $("#product-page").css({ display: "none" });
@@ -600,8 +598,12 @@
       $("#order-page").css({ display: "none" });
       $("#neworder-page").css({ display: "block" });
     });
+
   </script>
+  <script type="module" src="controller/RegisterController.js"></script>
+  <script type="module" src="controller/LoginController.js"></script>
   <script type="module" src="controller/CustomerController.js"></script>
   <script type="module" src="controller/ProductController.js"></script>
+  <script type="module" src="controller/PlaceOrderController.js"></script>
 </body>
 </html>

@@ -19,6 +19,13 @@ $('#customer-add-btn').on('click', () => {
 
     let customer = new CustomerModel(customerId, customerName, customerAddress, customerMobile);
 
+    // let customer = {
+    //     cusId: customerId,
+    //     cusName: customerName,
+    //     cusAddress: customerAddress,
+    //     cusMobile: customerMobile
+    // }
+
     customers.push(customer)
     loadTableCustomer();
     console.log(customers);
@@ -31,7 +38,7 @@ function loadTableCustomer(){
                                 <td class="cus_id" scope="row">${item.cusId}</td>     
                                 <td class="cus_name">${item.cusName}</td>
                                 <td class="cus_address">${item.cusAddress}</td>     
-                                <td class="cus_mobile">${item.cusMoblie}</td>
+                                <td class="cus_mobile">${item.cusMobile}</td>
                             </tr>`
         $('#customer-table').append(record);
     });
@@ -68,7 +75,7 @@ $("#customer-update-btn").on('click', () => {
     cusObj.cusId = customerId;
     cusObj.cusName = customerName;
     cusObj.cusAddress = customerAddress;
-    cusObj.cusMoblie = customerMobile;
+    cusObj.cusMobile = customerMobile;
 
     loadTable();
 });
