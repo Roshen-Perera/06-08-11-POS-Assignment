@@ -22,11 +22,13 @@ $('#product-add-btn').on('click', () => {
     let product = new ProductModel(productId, productName, productType, productQty, productPrice);
 
     products.push(product)
-    loadTableproduct();
+    loadTableProduct();
+    totalProducts();
     console.log(products);
+    clearFields();
 });
 
-function loadTableproduct(){
+function loadTableProduct(){
     $('#product-table').empty();
     products.map((item, index) =>{
         let record = `<tr>
@@ -42,8 +44,8 @@ function loadTableproduct(){
 
 $("#product-table").on('click', 'tr',function()  {
     // console.log("Adoo");
-    let index = $(this).index();
-    console.log(index);
+    recordIndex = $(this).index();
+    console.log(recordIndex);
 
     let productId = $(this).find(".pro_id").text();
     let productName = $(this).find(".pro_name").text();
@@ -58,7 +60,45 @@ $("#product-table").on('click', 'tr',function()  {
     $("#pro-custom-price").val(productPrice);
 });
 
+$("#product-update-btn").on('click', () => {
+    var productId = $('#pro-custom-id').val();
+    var productName = $('#pro-custom-name').val();
+    var productType = $('#pro-custom-type').val();
+    var productQty = $('#pro-custom-qty').val();
+    var productPrice = $('#pro-custom-price').val();
+
+    let proObj = products[recordIndex];
+    proObj.proId = productId;
+    proObj.proName = productName;
+    proObj.proType = productType;
+    proObj.proQty = productQty;
+    proObj.proPrice = productPrice;
+
+    loadTableProduct();
+    clearFields();
+});
+
 $('#product-delete-btn').on('click', () => {
     products.splice(recordIndex, 1);
-    loadTableproduct();
+    loadTableProduct();
+    totalProducts();
+    clearFields();
 });
+
+$('#product-reset-btn').on('click', () => {
+    clearFields();
+});
+
+function clearFields() {
+    $('#pro-custom-id').clear()
+    $('#pro-custom-name').clear();
+    $('#pro-custom-type').clear();
+    $('#pro-custom-qty').clear();
+    $('#pro-custom-price').clear();
+}
+
+function totalProducts() {
+    var totalProduct = products.length;
+    console.log(totalProduct);
+    $('#countProduct').text(totalProduct);
+}

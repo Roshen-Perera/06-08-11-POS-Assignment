@@ -28,6 +28,7 @@ $('#customer-add-btn').on('click', () => {
 
     customers.push(customer)
     loadTableCustomer();
+    totalCustomers();
     console.log(customers);
 });
 
@@ -46,8 +47,9 @@ function loadTableCustomer(){
 
 $("#customer-table").on('click', 'tr',function()  {
     // console.log("Adoo");
-    let index = $(this).index();
-    console.log(index);
+    recordIndex = $(this).index();
+
+    console.log(recordIndex);
 
     let customerId = $(this).find(".cus_id").text();
     let customerName = $(this).find(".cus_name").text();
@@ -77,10 +79,17 @@ $("#customer-update-btn").on('click', () => {
     cusObj.cusAddress = customerAddress;
     cusObj.cusMobile = customerMobile;
 
-    loadTable();
+    loadTableCustomer();
 });
 
 $('#customer-delete-btn').on('click', () => {
     customers.splice(recordIndex, 1);
+    totalCustomers();
     loadTableCustomer();
 });
+
+function totalCustomers() {
+    var totalCustomer = customers.length
+    console.log(totalCustomer);
+    $('#countCustomer').text(totalCustomer);
+}

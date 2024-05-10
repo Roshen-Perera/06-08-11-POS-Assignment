@@ -38,7 +38,7 @@ export default class ProductModel{
     set proPrice(value) {
         this._proPrice = value;
     }
-    constructor() {
+    constructor(proId, proName, proType, proQty, proPrice) {
         this._proId = proId;
         this._proName = proName;
         this._proType = proType;
