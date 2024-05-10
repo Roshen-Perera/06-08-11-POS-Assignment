@@ -85,16 +85,16 @@ $('#product-delete-btn').on('click', () => {
     clearFields();
 });
 
-$('#product-reset-btn').on('click', () => {
+$('#product-clear-btn').on('click', () => {
     clearFields();
 });
 
 function clearFields() {
-    $('#pro-custom-id').clear()
-    $('#pro-custom-name').clear();
-    $('#pro-custom-type').clear();
-    $('#pro-custom-qty').clear();
-    $('#pro-custom-price').clear();
+    $('#pro-custom-id').val("");
+    $('#pro-custom-name').val("");
+    $('#pro-custom-type').val("");
+    $('#pro-custom-qty').val("");
+    $('#pro-custom-price').val("");
 }
 
 function totalProducts() {

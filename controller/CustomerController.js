@@ -1,5 +1,5 @@
 import CustomerModel from "/model/CustomerModel.js"
-import {customers} from "/db/DB.js";
+import { customers } from "/db/DB.js";
 
 var recordIndex = undefined;
 
@@ -30,11 +30,12 @@ $('#customer-add-btn').on('click', () => {
     loadTableCustomer();
     totalCustomers();
     console.log(customers);
+    clearFields();
 });
 
-function loadTableCustomer(){
+function loadTableCustomer() {
     $('#customer-table').empty();
-    customers.map((item, index) =>{
+    customers.map((item, index) => {
         let record = `<tr>
                                 <td class="cus_id" scope="row">${item.cusId}</td>     
                                 <td class="cus_name">${item.cusName}</td>
@@ -45,7 +46,7 @@ function loadTableCustomer(){
     });
 }
 
-$("#customer-table").on('click', 'tr',function()  {
+$("#customer-table").on('click', 'tr', function () {
     // console.log("Adoo");
     recordIndex = $(this).index();
 
@@ -80,13 +81,26 @@ $("#customer-update-btn").on('click', () => {
     cusObj.cusMobile = customerMobile;
 
     loadTableCustomer();
+    clearFields();
 });
 
 $('#customer-delete-btn').on('click', () => {
     customers.splice(recordIndex, 1);
     totalCustomers();
     loadTableCustomer();
+    clearFields();
 });
+
+$('#customer-clear-btn').on('click', () => {
+    clearFields();
+});
+
+function clearFields() {
+    $('#cus-custom-id').val('');
+    $('#cus-custom-user').val('');
+    $('#cus-custom-address').val('');
+    $('#cus-custom-mobile').val('');
+}
 
 function totalCustomers() {
     var totalCustomer = customers.length
