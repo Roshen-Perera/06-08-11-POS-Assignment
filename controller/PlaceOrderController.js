@@ -1,12 +1,15 @@
-//import CustomerModel from "/model/CustomerModel.js"
+import CustomerModel from "/model/CustomerModel.js"
 import {customers} from "/db/DB.js";
 
-    $.each(customers, function(index, obj) {
-        $('#customerSelectID').append($('<option>').text(obj.cusId).attr('value', obj.cusId));
+let customerModel = new CustomerModel();
+
+    $.each(customers, function(index, customerModel) {
+        $('#customerSelectID').append($('<option>').text(customerModel.cusId).attr('value', customerModel.cusId));
+
     });
 
     $('#customerSelectID').change(function(){
         var selectedId = $(this).val(); // Get the selected ID
-        var selectedName = data.find(obj => obj.cusId === selectedId).cusName; // Find the corresponding name
+        var selectedName = customers.find(customerModel => customerModel.cusId === selectedId).cusName; // Find the corresponding name
         $('#validationCustomerName').val(selectedName); // Set the name in the input field
     });

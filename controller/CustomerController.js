@@ -1,5 +1,5 @@
 import CustomerModel from "/model/CustomerModel.js"
-import { customers } from "/db/DB.js";
+import {customers} from "/db/DB.js";
 
 var recordIndex = undefined;
 
