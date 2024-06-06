@@ -28,7 +28,7 @@ $('#product-add-btn').on('click', () => {
     clearFields();
 });
 
-function loadTableProduct(){
+export function loadTableProduct(){
     $('#product-table').empty();
     products.map((item, index) =>{
         let record = `<tr>
@@ -100,5 +100,5 @@ function clearFields() {
 function totalProducts() {
     var totalProduct = products.length;
     console.log(totalProduct);
-    $('#countProduct').text(totalProduct);
+    $('#productCount').text(totalProduct);
 }

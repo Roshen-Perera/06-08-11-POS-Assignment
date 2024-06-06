@@ -33,7 +33,7 @@ $('#customer-add-btn').on('click', () => {
     clearFields();
 });
 
-function loadTableCustomer() {
+export function loadTableCustomer() {
     $('#customer-table').empty();
     customers.map((item, index) => {
         let record = `<tr>
@@ -103,7 +103,7 @@ function clearFields() {
 }
 
 function totalCustomers() {
-    var totalCustomer = customers.length
-    console.log(totalCustomer);
-    $('#countCustomer').text(totalCustomer);
+    let totalCustomer = customers.length
+    console.log("Customer Count: "+totalCustomer);
+    $('#customerCount').text(totalCustomer);
 }

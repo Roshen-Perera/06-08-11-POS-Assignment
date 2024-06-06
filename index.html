@@ -184,19 +184,19 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Customers</h5>
-            <label id="customerCount" class="card-text">0</label>
+            <label id="customerCount" class="card-text"></label>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Products</h5>
-            <label id="productCount" class="card-text">0</label>
+            <label id="productCount" class="card-text"></label>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Orders</h5>
-            <label id="orderCount" class="card-text">0</label>
+            <label id="orderCount" class="card-text"></label>
           </div>
         </div>
       </div>
@@ -253,37 +253,33 @@
   <div id="customer-page">
     <div class="pane">
       <section>
-        <form class="form needs-validation" novalidate>
-          <div class="col-md-4">
-            <label for="validationCustom01" class="form-label">First name</label>
-            <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
+        <form class="needs-validation" novalidate>
           <div class="col-md-6 col-sm-12">
             <input id="cus-custom-id" type="text" class="form-control" placeholder="ID">
           </div>
           <div class="col-md-6 col-sm-12">
-            <input id="cus-custom-user" type="text" class="form-control" placeholder="Name">
+            <input id="cus-custom-user" type="text" class="form-control" placeholder="Name" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <input id="cus-custom-address" type="text" class="form-control" placeholder="Address">
+            <input id="cus-custom-address" type="text" class="form-control" placeholder="Address" required>
           </div>
           <div class="col-md-6 col-sm-12">
-            <input id="cus-custom-mobile" type="number" class="form-control" placeholder="Mobile Number">
+            <input id="cus-custom-mobile" type="email" class="form-control" placeholder="Email Address" required>
           </div>
           <div class="col-md-6 col-sm-12">
             <input id="cus-custom-search" type="text" class="form-control" placeholder="Search">
           </div>
-          <button class="btn" id="btnSearchCustomer" type="button" class="btn btn-primary btn-lg">Search</button>
+          <div class="cus-custom-btn">
+<!--            <button class="btn" id="btnSearchCustomer" type="button" class="btn btn-primary btn-lg">Search</button>-->
+            <button class="btn btn-primary" type="submit">Add</button>
+<!--            <button id="customer-delete-btn" class="btn btn-primary" type="button">Delete</button>   id="customer-add-btn"-->
+<!--            <button id="customer-update-btn" class="btn btn-primary" type="button">Update</button>-->
+<!--            <button id="customer-clear-btn" class="btn btn-primary" type="button">Clear</button>-->
+          </div>
         </form>
-        <div class="cus-custom-btn">
-          <button id="customer-add-btn" class="btn btn-primary" type="button">Add</button>
-          <button id="customer-delete-btn" class="btn btn-primary" type="button">Delete</button>
-          <button id="customer-update-btn" class="btn btn-primary" type="button">Update</button>
-          <button id="customer-clear-btn" class="btn btn-primary" type="button">Clear</button>
-        </div>
       </section>
       <section>
         <div class="div-table">
@@ -324,9 +320,9 @@
         <div class="col-md-6">
           <input id="pro-custom-search" type="text" class="form-control" placeholder="Search">
         </div>
-        <button class="btn" type="button" class="btn btn-primary btn-lg">Search</button>
       </form>
       <div class="pro-custom-btn">
+        <button class="btn" type="button" class="btn btn-primary btn-lg">Search</button>
         <button id="product-add-btn" class="btn btn-primary" type="button">Add</button>
         <button id="product-delete-btn" class="btn btn-primary" type="button">Delete</button>
         <button id="product-update-btn" class="btn btn-primary" type="button">Update</button>
@@ -403,11 +399,11 @@
           <div class="row g-3">
             <div class="col-md-3">
               <label class="form-label">Order ID: </label>
-              <label class="form-label cus-label">O001</label>
+              <label id="orderId" class="form-label cus-label">O001</label>
             </div>
             <div class="col-md-6">
               <label class="form-label">Order Date: </label>
-              <label class="form-label cus-label">03/03/2024</label>
+              <label id="orderDate" class="form-label cus-label"></label>
             </div>
           </div>
           <div class="row g-3">
@@ -418,91 +414,77 @@
               </select>
             </div>
             <div class="col-md-4">
-              <label for="validationCustomerName" class="form-label">Customer name</label>
-              <input type="text" class="form-control" id="validationCustomerName" readonly>
+              <label id="ado" for="customerName" class="form-label">Customer name</label>
+              <input type="text" class="form-control" id="customerName" readonly>
             </div>
           </div>
           <div class="col-md-2">
-            <label for="validationProductID" class="form-label">Product ID</label>
-            <select class="form-select" id="validationProductID" required>
+            <label for="productSelectID" class="form-label">Product ID</label>
+            <select class="form-select" id="productSelectID" required>
               <option selected disabled value="">Choose...</option>
-              <option>...</option>
             </select>
           </div>
           <div class="col-md-2">
-            <label for="validationProductName" class="form-label">Product name</label>
-            <input type="text" class="form-control" id="validationProductName" value="Munchee" required>
+            <label for="productName" class="form-label">Product name</label>
+            <input type="text" class="form-control" id="productName" required>
           </div>
           <div class="col-md-2">
-            <label for="validationProductType" class="form-label">Product Type</label>
-            <input type="text" class="form-control" id="validationProductType" value="Biscuit" required>
+            <label for="productType" class="form-label">Product Type</label>
+            <input type="text" class="form-control" id="productType" required>
           </div>
           <div class="col-md-2">
-            <label for="validationProductQTY" class="form-label">QTY</label>
-            <input type="text" class="form-control" id="validationProductQTY" value="10" required>
+            <label for="productQTY" class="form-label">QTY on Hand</label>
+            <input type="text" class="form-control" id="productQTY" readonly>
           </div>
           <div class="col-md-2">
-            <label for="validationProductPrice" class="form-label">Price</label>
-            <input type="text" class="form-control" id="validationProductPrice" value="200" required>
+            <label for="productQtyNeeded" class="form-label">QTY</label>
+            <input type="text" class="form-control" id="productQtyNeeded" required>
           </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Add to Cart</button>
-            <button type="submit" class="btn btn-primary mb-3">Place Order</button>
+          <div class="col-md-2">
+            <label for="productPrice" class="form-label">Price</label>
+            <input type="text" class="form-control" id="productPrice" required>
           </div>
-        </form>
+          <div class="col-md-2">
+            <label for="totalBill" class="form-label">Total</label>
+            <input type="text" class="form-control" id="totalBill" required>
+          </div>
 
-      </div>
-      <div class="div-table">
-        <table class="neworder-custom-table table table-bordered">
-          <thead>
+            <div class="btn-grp">
+              <button id="addToCart" type="button" class="btn btn-success">Add to Cart</button>
+              <button id="removeFromCart" type="button" class="btn btn-danger">Remove from Cart</button>
+              <button id="clear" type="button" class="btn btn-warning">Clear</button>
+              <button id="placeOrder" type="button" class="btn btn-primary">Place Order</button>
+            </div>
+        </form>
+        <div class="div-table">
+          <table class="neworder-custom-table table table-bordered">
+            <thead>
             <tr>
               <th scope="col">Order ID</th>
-              <th scope="col">Customer Name</th>
               <th scope="col">Product Name</th>
               <th scope="col">Product Type</th>
               <th scope="col">QTY</th>
               <th scope="col">Price</th>
+              <th scope="col">Total</th>
             </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">O001</th>
-              <td>Roshen</td>
-              <td>Munchee</td>
-              <td>Biscuit</td>
-              <td>100</td>
-              <td>580</td>
-            </tr>
-            <tr>
-              <th scope="row">O001</th>
-              <td>Roshen</td>
-              <td>Munchee</td>
-              <td>Biscuit</td>
-              <td>100</td>
-              <td>580</td>
-            </tr>
-            <tr>
-              <th scope="row">O001</th>
-              <td>Roshen</td>
-              <td>Munchee</td>
-              <td>Biscuit</td>
-              <td>100</td>
-              <td>580</td>
-            </tr>
-          </tbody>
-        </table>
+            </thead>
+            <tbody id="cart-table">
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+      </div>
+
   </div>
   <script src="assets/lib/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script>
-    $("#navigation").css({ display: "none" });
-    $("#login-page").css({ display: "block" });
+    $("#navigation").css({ display: "block" });
+    $("#login-page").css({ display: "none" });
     $("#register-page").css({ display: "none" });
-    $("#dashboard-page").css({ display: "none" });
+    $("#dashboard-page").css({ display: "block" });
     $("#customer-page").css({ display: "none" });
     $("#product-page").css({ display: "none" });
     $("#order-page").css({ display: "none" });
@@ -534,7 +516,7 @@
     $('#login-link').on('click', () => {
       $("#navigation").css({ display: "none" });
       $("#login-page").css({ display: "block" });
-      $("#register-page").css({ display: "none" });
+      $("#register-page").css({ display: "none" });u
       $("#dashboard-page").css({ display: "none" });
       $("#customer-page").css({ display: "none" });
       $("#product-page").css({ display: "none" });
