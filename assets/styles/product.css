@@ -136,7 +136,7 @@
       position: absolute;
   }
 
-  #pro-custom-search{
+  /*#pro-custom-search{
       width: 180px;
       height: 60px;
       border: 4px solid #32008E;
@@ -144,9 +144,9 @@
       left: 20px;
       top: 200px;
       position: absolute;
-  }
+  }*/
 
-  #btn{
+  .btn{
       background-color: #32008E;
       top: 206px;
       position: absolute;

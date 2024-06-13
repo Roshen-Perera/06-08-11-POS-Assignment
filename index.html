@@ -239,16 +239,16 @@
 <!--            </label>-->
           </div>
           <div class="col-md-6 col-sm-12">
-            <input id="cus-custom-mobile" type="email" class="form-control" placeholder="number" required>
+            <input id="cus-custom-mobile" type="number" class="form-control" placeholder="Mobile Number" required>
 <!--            <label id="customerMobileCheck" style="color: red;">-->
 <!--              **Mobile Number is missing-->
 <!--            </label>-->
           </div>
-          <div class="col-md-6 col-sm-12">
+          <!--<div class="col-md-6 col-sm-12">
             <input id="cus-custom-search" type="text" class="form-control" placeholder="Search">
-          </div>
+          </div>-->
           <div class="cus-custom-btn">
-            <button class="btn" id="btnSearchCustomer" type="button" class="btn btn-primary btn-lg">Search</button>
+            <button id="btnSearchCustomer" type="button" class="btn btn-primary">Search</button>
             <button class="btn btn-primary" id="customer-add-btn" type="button">Add</button>
             <button id="customer-delete-btn" class="btn btn-primary" type="button">Delete</button>
             <button id="customer-update-btn" class="btn btn-primary" type="button">Update</button>
@@ -292,12 +292,12 @@
         <div class="col-md-6">
           <input id="pro-custom-price" type="text" class="form-control" placeholder="Price">
         </div>
-        <div class="col-md-6">
+        <!--<div class="col-md-6">
           <input id="pro-custom-search" type="text" class="form-control" placeholder="Search">
-        </div>
+        </div>-->
       </form>
       <div class="pro-custom-btn">
-        <button id="btnSearchProduct" type="button" class="btn btn-primary btn-lg">Search</button>
+        <button id="btnSearchProduct" type="button" class="btn btn-primary">Search</button>
         <button id="product-add-btn" class="btn btn-primary" type="button">Add</button>
         <button id="product-delete-btn" class="btn btn-primary" type="button">Delete</button>
         <button id="product-update-btn" class="btn btn-primary" type="button">Update</button>
@@ -395,11 +395,6 @@
             <label for="productPrice" class="form-label">Price</label>
             <input type="text" class="form-control" id="productPrice" required>
           </div>
-          <div class="col-md-2">
-            <label for="totalBill" class="form-label">Total</label>
-            <input type="text" class="form-control" id="totalBill" required>
-          </div>
-
             <div class="btn-grp">
               <button id="addToCart" type="button" class="btn btn-success">Add to Cart</button>
               <button id="removeFromCart" type="button" class="btn btn-danger">Remove from Cart</button>

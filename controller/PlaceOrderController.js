@@ -1,4 +1,4 @@
-import {customers, products, orderDetails} from "/db/DB.js";
+import {customers, products, orderDetails, orders} from "/db/DB.js";
 import OrderDetailModel from "/model/OrderDetailModel.js"
 import {loadTableProduct} from "./ProductController.js";
 import {loadTableCustomer} from "./CustomerController.js";
@@ -159,6 +159,7 @@ $('#addToCart').on('click', () => {
         loadTableCustomer();
         loadTableProduct();
         loadTableCart();
+        totalOrders();
         console.log(orderDetails);
         clearFields();
     }
@@ -167,8 +168,12 @@ $('#addToCart').on('click', () => {
 $('#removeFromCart').on('click', () => {
     orderDetails.splice(recordIndex, 1);
     loadTableCart();
+    totalOrders();
     clearFields();
 });
 
-
-
+function totalOrders() {
+    let totalOrder = orders.length
+    console.log("Customer Count: "+totalOrder);
+    $('#orderCount').text(totalOrder);
+}
