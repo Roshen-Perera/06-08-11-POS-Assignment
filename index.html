@@ -433,44 +433,25 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>
   <script>
-    $(document).ready (function () {
-      $("#basic-form").validate ();
-    });
-    // var forms = document.querySelectorAll('.needs-validation');
-    //
-    // Array.prototype.slice.call( forms ).forEach( function( form )
-    // {
-    //   form.addEventListener( 'submit', function ( event )
-    //   {
-    //     if ( !form.checkValidity( ) )
-    //     {
-    //       event.preventDefault( )
-    //       event.stopPropagation( );
-    //     }
-    //
-    //     form.classList.add( 'was-validated' );
-    //   }, false );
-    // } );
-
-    $("#navigation").css({ display: "block" });
-    $("#login-page").css({ display: "none" });
+    $("#navigation").css({ display: "none" });
+    $("#login-page").css({ display: "block" });
     $("#register-page").css({ display: "none" });
-    $("#dashboard-page").css({ display: "block" });
+    $("#dashboard-page").css({ display: "none" });
     $("#customer-page").css({ display: "none" });
     $("#product-page").css({ display: "none" });
     $("#order-page").css({ display: "none" });
     $("#neworder-page").css({ display: "none" });
 
-    // $('#login-btn').on('click', () => {
-    //   $("#navigation").css({ display: "block" });
-    //   $("#login-page").css({ display: "none" });
-    //   $("#register-page").css({ display: "none" });
-    //   $("#dashboard-page").css({ display: "block" });
-    //   $("#customer-page").css({ display: "none" });
-    //   $("#product-page").css({ display: "none" });
-    //   $("#order-page").css({ display: "none" });
-    //   $("#neworder-page").css({ display: "none" });
-    // });
+    $('#login-btn').on('click', () => {
+      $("#navigation").css({ display: "block" });
+      $("#login-page").css({ display: "none" });
+      $("#register-page").css({ display: "none" });
+      $("#dashboard-page").css({ display: "block" });
+      $("#customer-page").css({ display: "none" });
+      $("#product-page").css({ display: "none" });
+      $("#order-page").css({ display: "none" });
+      $("#neworder-page").css({ display: "none" });
+    });
 
     $('#reg-link').on('click', () => {
 
