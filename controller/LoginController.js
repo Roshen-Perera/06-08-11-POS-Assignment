@@ -9,10 +9,10 @@ $('#login-btn').click(function(e) {
     console.log("Username:", loginUsername);
     console.log("Password:", loginPassword);
 
-    if (loginUsername === '' || loginPassword === '') {
+    if ($('#login-custom-user').val() === "" && $('#login-custom-pw').val() === "") {
         alert("Please enter username and password");
         console.log("Empty fields detected");
-        return;
+        return false;
     }
 
     var user = users.find(user => user.username === loginUsername && user.password === loginPassword);

@@ -6,6 +6,11 @@ $('#reg-btn').click(function(e) {
     var emailAddress = $('#reg-custom-email').val();
     var password = $('#reg-custom-pw').val();
 
+    if (username === "" && emailAddress === "" && password === "") {
+        alert("Please enter Details");
+        console.log("Empty fields detected");
+        return false;
+    }
     // Check if username is already taken
     if (users.find(user => user.username === username)) {
         alert("Username already exists");
