@@ -202,50 +202,16 @@
       </div>
       <table class="dash-custom-table table table-bordered">
         <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Email Address</th>
-          </tr>
+        <tr>
+          <th scope="col">Order ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Product Type</th>
+          <th scope="col">QTY</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+        </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
+        <tbody id="dash-table">
         </tbody>
       </table>
     </div>
@@ -256,28 +222,37 @@
         <form class="needs-validation" novalidate>
           <div class="col-md-6 col-sm-12">
             <input id="cus-custom-id" type="text" class="form-control" placeholder="ID">
+<!--            <label id="customerIdCheck" style="color: red;">-->
+<!--              **ID is missing-->
+<!--            </label>-->
           </div>
           <div class="col-md-6 col-sm-12">
             <input id="cus-custom-user" type="text" class="form-control" placeholder="Name" required>
-            <div class="invalid-feedback">
-              Please choose a username.
-            </div>
+<!--            <label id="customerUserCheck" style="color: red;">-->
+<!--              **Username is missing-->
+<!--            </label>-->
           </div>
           <div class="col-md-6 col-sm-12">
             <input id="cus-custom-address" type="text" class="form-control" placeholder="Address" required>
+<!--            <label id="customerAddressCheck" style="color: red;">-->
+<!--              **Address is missing-->
+<!--            </label>-->
           </div>
           <div class="col-md-6 col-sm-12">
-            <input id="cus-custom-mobile" type="email" class="form-control" placeholder="Email Address" required>
+            <input id="cus-custom-mobile" type="email" class="form-control" placeholder="number" required>
+<!--            <label id="customerMobileCheck" style="color: red;">-->
+<!--              **Mobile Number is missing-->
+<!--            </label>-->
           </div>
           <div class="col-md-6 col-sm-12">
             <input id="cus-custom-search" type="text" class="form-control" placeholder="Search">
           </div>
           <div class="cus-custom-btn">
-<!--            <button class="btn" id="btnSearchCustomer" type="button" class="btn btn-primary btn-lg">Search</button>-->
-            <button class="btn btn-primary" type="submit">Add</button>
-<!--            <button id="customer-delete-btn" class="btn btn-primary" type="button">Delete</button>   id="customer-add-btn"-->
-<!--            <button id="customer-update-btn" class="btn btn-primary" type="button">Update</button>-->
-<!--            <button id="customer-clear-btn" class="btn btn-primary" type="button">Clear</button>-->
+            <button class="btn" id="btnSearchCustomer" type="button" class="btn btn-primary btn-lg">Search</button>
+            <button class="btn btn-primary" id="customer-add-btn" type="button">Add</button>
+            <button id="customer-delete-btn" class="btn btn-primary" type="button">Delete</button>
+            <button id="customer-update-btn" class="btn btn-primary" type="button">Update</button>
+            <button id="customer-clear-btn" class="btn btn-primary" type="button">Clear</button>
           </div>
         </form>
       </section>
@@ -322,7 +297,7 @@
         </div>
       </form>
       <div class="pro-custom-btn">
-        <button class="btn" type="button" class="btn btn-primary btn-lg">Search</button>
+        <button id="btnSearchProduct" type="button" class="btn btn-primary btn-lg">Search</button>
         <button id="product-add-btn" class="btn btn-primary" type="button">Add</button>
         <button id="product-delete-btn" class="btn btn-primary" type="button">Delete</button>
         <button id="product-update-btn" class="btn btn-primary" type="button">Update</button>
@@ -349,40 +324,16 @@
     <div class="pane">
       <table class="order-custom-table table table-striped table-bordered">
         <thead>
-          <tr>
-            <th scope="col">Order ID</th>
-            <th scope="col">Customer Name</th>
-            <th scope="col">Product Name</th>
-            <th scope="col">Product Type</th>
-            <th scope="col">QTY</th>
-            <th scope="col">Price</th>
-          </tr>
+        <tr>
+          <th scope="col">Order ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Product Type</th>
+          <th scope="col">QTY</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+        </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">O001</th>
-            <td>Roshen</td>
-            <td>Munchee</td>
-            <td>Biscuit</td>
-            <td>100</td>
-            <td>580</td>
-          </tr>
-          <tr>
-            <th scope="row">O001</th>
-            <td>Roshen</td>
-            <td>Munchee</td>
-            <td>Biscuit</td>
-            <td>100</td>
-            <td>580</td>
-          </tr>
-          <tr>
-            <th scope="row">O001</th>
-            <td>Roshen</td>
-            <td>Munchee</td>
-            <td>Biscuit</td>
-            <td>100</td>
-            <td>580</td>
-          </tr>
+        <tbody id="order-table">
         </tbody>
       </table>
       <div class="order-custom-btn">
@@ -480,7 +431,27 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>
   <script>
+    $(document).ready (function () {
+      $("#basic-form").validate ();
+    });
+    // var forms = document.querySelectorAll('.needs-validation');
+    //
+    // Array.prototype.slice.call( forms ).forEach( function( form )
+    // {
+    //   form.addEventListener( 'submit', function ( event )
+    //   {
+    //     if ( !form.checkValidity( ) )
+    //     {
+    //       event.preventDefault( )
+    //       event.stopPropagation( );
+    //     }
+    //
+    //     form.classList.add( 'was-validated' );
+    //   }, false );
+    // } );
+
     $("#navigation").css({ display: "block" });
     $("#login-page").css({ display: "none" });
     $("#register-page").css({ display: "none" });

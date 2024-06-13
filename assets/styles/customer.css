@@ -76,6 +76,11 @@
   font-weight: bold;
 }
 
+#customer-page>label{
+    display: flex;
+    justify-content: end;
+}
+
 @media all and (max-width: 600px) {
     #cus-custom-id{
         width: 100px;

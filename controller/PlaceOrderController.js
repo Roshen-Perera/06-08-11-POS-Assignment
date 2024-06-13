@@ -3,6 +3,7 @@ import OrderDetailModel from "/model/OrderDetailModel.js"
 import {loadTableProduct} from "./ProductController.js";
 import {loadTableCustomer} from "./CustomerController.js";
 
+
 let cusId = null;
 
 const date = new Date();
@@ -26,7 +27,6 @@ function updateCustomerIDs() {
         option.value = JSON.stringify(customer);
         option.text = customer.cusId;
         $('#customerSelectID').append(option);
-
     });
 }
 
@@ -87,6 +87,9 @@ $('#productSelectID').on('change', function() {
 
 function loadTableCart() {
     $('#cart-table').empty();
+    $('#order-table').empty();
+    $('#dash-table').empty();
+
     orderDetails.map((item, index) => {
         let record = `<tr>
                                 <td class="order_id" scope="row">${item.orderId}</td>
@@ -97,6 +100,8 @@ function loadTableCart() {
                                 <td class="pro_total">${item.proTotal}</td>
                             </tr>`
         $('#cart-table').append(record);
+        $('#order-table').append(record);
+        $('#dash-table').append(record);
     });
 }
 
@@ -131,41 +136,38 @@ $("#cart-table").on('click', 'tr', function () {
 
 
 $('#addToCart').on('click', () => {
-    let customerId = cusId;
-    let customerName = $('#customerName').val();
-    let productId = $('#productSelectID option:selected').text();
-    let productName = $('#productName').val();
-    let productType = $('#productType').val();
-    let productQTYNeeded = $('#productQtyNeeded').val();
-    let productPrice = $('#productPrice').val();
-    let productTotal = productQTYNeeded*productPrice;
+    if ($('#productQty').val() <= $('#productQtyNeeded').val()) {
+        alert("Blah")
+    } else {
+        let customerId = cusId;
+        let customerName = $('#customerName').val();
+        let productId = $('#productSelectID option:selected').text();
+        let productName = $('#productName').val();
+        let productType = $('#productType').val();
+        let productQTYNeeded = $('#productQtyNeeded').val();
+        let productPrice = $('#productPrice').val();
+        let productTotal = productQTYNeeded*productPrice;
 
-    let orderDetail = new OrderDetailModel(orderId, customerId, customerName, productId, productName, productType, productQTYNeeded, productPrice, productTotal);
+        let orderDetail = new OrderDetailModel(orderId, customerId, customerName, productId, productName, productType, productQTYNeeded, productPrice, productTotal);
 
-    const selectedProduct = products.find(product => product.proId === productId)
-    selectedProduct.proQty = selectedProduct.proQty - $('#productQtyNeeded').val();
-    console.log("Product Qty: "+selectedProduct.proQty);
+        const selectedProduct = products.find(product => product.proId === productId)
+        selectedProduct.proQty = selectedProduct.proQty - $('#productQtyNeeded').val();
+        console.log("Product Qty: "+selectedProduct.proQty);
 
-    orderDetails.push(orderDetail);
+        orderDetails.push(orderDetail);
 
-    loadTableCustomer();
-    loadTableProduct();
-    loadTableCart();
-    console.log(orderDetails);
-    clearFields();
+        loadTableCustomer();
+        loadTableProduct();
+        loadTableCart();
+        console.log(orderDetails);
+        clearFields();
+    }
 });
 
 $('#removeFromCart').on('click', () => {
     orderDetails.splice(recordIndex, 1);
     loadTableCart();
     clearFields();
-});
-
-$('#placeOrder').on('click', () => {
-    let orderId = $('#orderId').text();
-    let customerName = $('#customerName').val();
-    let totalBill;
-    let orderDate = date.getFullYear()+"/"+date.getMonth()+"/"+date.getDate();
 });
 
 
