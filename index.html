@@ -350,7 +350,7 @@
           <div class="row g-3">
             <div class="col-md-3">
               <label class="form-label">Order ID: </label>
-              <label id="orderId" class="form-label cus-label">O001</label>
+              <input type="text" class="form-control" id="orderId" required>
             </div>
             <div class="col-md-6">
               <label class="form-label">Order Date: </label>
@@ -437,16 +437,16 @@
     $("#order-page").css({ display: "none" });
     $("#neworder-page").css({ display: "none" });
 
-    // $('#login-btn').on('click', () => {
-    //   $("#navigation").css({ display: "block" });
-    //   $("#login-page").css({ display: "none" });
-    //   $("#register-page").css({ display: "none" });
-    //   $("#dashboard-page").css({ display: "block" });
-    //   $("#customer-page").css({ display: "none" });
-    //   $("#product-page").css({ display: "none" });
-    //   $("#order-page").css({ display: "none" });
-    //   $("#neworder-page").css({ display: "none" });
-    // });
+    $('#login-btn').on('click', () => {
+      $("#navigation").css({ display: "block" });
+      $("#login-page").css({ display: "none" });
+      $("#register-page").css({ display: "none" });
+      $("#dashboard-page").css({ display: "block" });
+      $("#customer-page").css({ display: "none" });
+      $("#product-page").css({ display: "none" });
+      $("#order-page").css({ display: "none" });
+      $("#neworder-page").css({ display: "none" });
+    });
 
     $('#reg-link').on('click', () => {
 

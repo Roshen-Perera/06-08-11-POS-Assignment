@@ -9,10 +9,9 @@ let cusId = null;
 const date = new Date();
 
 let recordIndex = undefined;
-let orderId = $('#orderId').text();
 let orderDate = date.getFullYear()+"/"+date.getMonth()+"/"+date.getDate();
 
-$('#orderId').text(orderId);
+
 $('#orderDate').text(orderDate);
 
 function updateCustomerIDs() {
@@ -136,9 +135,10 @@ $("#cart-table").on('click', 'tr', function () {
 
 
 $('#addToCart').on('click', () => {
-    if ($('#productQty').val() <= $('#productQtyNeeded').val()) {
-        alert("Blah")
-    } else {
+    // if ($('#productQty').val() <= $('#productQtyNeeded').val()) {
+    //     alert("Blah")
+    // } else {
+        let orderId = $('#orderId').val();
         let customerId = cusId;
         let customerName = $('#customerName').val();
         let productId = $('#productSelectID option:selected').text();
@@ -162,7 +162,7 @@ $('#addToCart').on('click', () => {
         totalOrders();
         console.log(orderDetails);
         clearFields();
-    }
+    console.log(orderId);
 });
 
 $('#removeFromCart').on('click', () => {
